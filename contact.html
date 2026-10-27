@@ -73,7 +73,7 @@
 
                     <div>
                         <h3>Email</h3>
-                        <p>hello@devcoders.example</p>
+                        <p><a href="mailto:fahadrhussain003@gmail.com">fahadrhussain003@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -106,9 +106,11 @@
                 </p>
 
                 <form class="contact-form"
-                      action="mailto:hello@devcoders.example"
-                      method="post"
-                      enctype="text/plain">
+                      action="https://formsubmit.co/fahadrhussain003@gmail.com"
+                      method="POST">
+                    <input type="hidden" name="_subject" id="email-subject" value="New message from DevCoders contact page">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
                     <div class="form-group">
                         <label for="name">Your Name</label>
@@ -127,7 +129,7 @@
                         <input
                             type="email"
                             id="email"
-                            name="Email"
+                            name="email"
                             placeholder="Enter your email"
                             required>
                     </div>
@@ -160,10 +162,19 @@
 
                 </form>
 
-                <p class="form-note">
-                    This demo uses your email application to send
-                    messages. See the setup note below.
+                <p class="form-note" id="form-note">
+                    Your message will be sent through our form service. You can reply directly to the email address you provide.
                 </p>
+
+                <script>
+                    const contactForm = document.querySelector(".contact-form");
+                    const subjectInput = document.getElementById("subject");
+                    const emailSubject = document.getElementById("email-subject");
+
+                    contactForm.addEventListener("submit", function () {
+                        emailSubject.value = "DevCoders contact: " + subjectInput.value.trim();
+                    });
+                </script>
 
             </div>
 
@@ -201,8 +212,8 @@
 
                 <p>Have a project idea?</p>
 
-                <a href="mailto:hello@devcoders.example">
-                    Send us an email
+                <a href="mailto:fahadrhussain003@gmail.com">
+                    Email fahadrhussain003@gmail.com
                 </a>
             </div>
 
