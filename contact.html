@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | DevCoders</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+
+        <div class="logo">
+            <img src="img/coding.png" alt="DevCoders Logo">
+        </div>
+
+        <div class="logotext">DevCoders</div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="button">
+            <button class="search-btn" type="button">
+                <img src="img/search-icon.png" alt="">
+                Search
+            </button>
+        </div>
+
+    </header>
+
+    <!-- CONTACT PAGE -->
+    <main class="contact-page">
+
+        <!-- Page heading -->
+        <section class="contact-hero">
+            <p class="section-tag">LET'S TALK</p>
+
+            <h1>Contact <span>Us</span></h1>
+
+            <p>
+                Have a question, an idea, or a project in mind?
+                We'd love to hear from you. Send us a message
+                and let's get started.
+            </p>
+        </section>
+
+        <!-- Contact content -->
+        <section class="contact-container">
+
+            <!-- Contact information -->
+            <div class="contact-info">
+                <p class="section-tag">GET IN TOUCH</p>
+
+                <h2>Let's Build Something Great</h2>
+
+                <p class="contact-info-description">
+                    Whether you're learning web development or
+                    planning a website, get in touch with DevCoders.
+                </p>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">@</div>
+
+                    <div>
+                        <h3>Email</h3>
+                        <p>hello@devcoders.example</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&lt;/&gt;</div>
+
+                    <div>
+                        <h3>Our Focus</h3>
+                        <p>Web design and development</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">✓</div>
+
+                    <div>
+                        <h3>Our Approach</h3>
+                        <p>Simple, creative, practical learning</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="contact-form-card">
+
+                <h2>Send Us a Message</h2>
+
+                <p class="form-description">
+                    Fill in the details below.
+                </p>
+
+                <form class="contact-form"
+                      action="mailto:hello@devcoders.example"
+                      method="post"
+                      enctype="text/plain">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="Name"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="Email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="Subject"
+                            placeholder="What is your message about?"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+
+                        <textarea
+                            id="message"
+                            name="Message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit">
+                        Send Message &rarr;
+                    </button>
+
+                </form>
+
+                <p class="form-note">
+                    This demo uses your email application to send
+                    messages. See the setup note below.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Same design as homepage -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>Dev<span>Coders</span></h2>
+
+                <p>
+                    Learn, create, and build your future
+                    with modern web development.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>Have a project idea?</p>
+
+                <a href="mailto:hello@devcoders.example">
+                    Send us an email
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 DevCoders. All rights reserved.</p>
+
+            <p>Designed with care by DevCoders.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

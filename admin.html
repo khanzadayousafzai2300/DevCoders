@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCoders Admin Dashboard</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #0f1020;
+      color: #f5f5ff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #c4a5ff;
+    }
+
+    .panel {
+      background: #1b1c33;
+      border: 1px solid #343552;
+      border-radius: 12px;
+      padding: 22px;
+      margin: 20px 0;
+    }
+
+    input, select, button {
+      font: inherit;
+      padding: 11px;
+      border-radius: 7px;
+      border: 1px solid #555777;
+    }
+
+    input, select {
+      width: 100%;
+      margin: 6px 0 14px;
+      background: #101126;
+      color: white;
+    }
+
+    button {
+      background: #8b5cf6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 4px;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #message {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 850px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #383953;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #c4a5ff;
+    }
+
+    td select {
+      min-width: 140px;
+    }
+
+    .muted {
+      color: #b9bad0;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>DevCoders Admin Dashboard</h1>
+    <p class="muted">Manage customer project requests.</p>
+
+    <p id="message" role="status"></p>
+
+    <section id="loginPanel" class="panel">
+      <h2>Admin Login</h2>
+
+      <form id="loginForm">
+        <label for="adminEmail">Admin Email</label>
+        <input
+          id="adminEmail"
+          type="email"
+          autocomplete="username"
+          required
+        >
+
+        <label for="adminPassword">Password</label>
+        <input
+          id="adminPassword"
+          type="password"
+          autocomplete="current-password"
+          required
+        >
+
+        <button id="loginButton" type="submit">Sign In</button>
+      </form>
+    </section>
+
+    <section id="dashboardPanel" hidden>
+      <div class="panel">
+        <div class="toolbar">
+          <h2>Project Bookings</h2>
+          <button id="refreshButton" type="button">
+            Refresh Bookings
+          </button>
+          <button id="logoutButton" type="button">
+            Sign Out
+          </button>
+        </div>
+
+        <p id="bookingCount" class="muted">No bookings loaded yet.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Contact</th>
+                <th>Project</th>
+                <th>Budget</th>
+                <th>Deadline</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="bookingTableBody">
+              <tr>
+                <td colspan="6">Sign in to load bookings.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="bookingDetails" class="panel" hidden>
+        <h2>Booking Details</h2>
+        <div id="detailsContent"></div>
+        <button id="closeDetailsButton" type="button">
+          Close Details
+        </button>
+      </div>
+    </section>
+  </main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</body>
+</html>

@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Project | DevCoders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="img/coding.png" alt="DevCoders Logo">
+    </div>
+
+    <div class="logotext">DevCoders</div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="booking-page">
+    <section class="booking-intro">
+      <p class="hero-label">LET'S WORK TOGETHER</p>
+      <h1>Book Your <span>Project</span></h1>
+      <p>
+        Tell us about your idea, your requirements, and your budget.
+        We'll review your request and discuss the next steps with you.
+      </p>
+    </section>
+
+    <form class="booking-form" action="#" method="post" id="projectBookingForm">
+
+      <fieldset>
+        <legend>01 — Your Details</legend>
+
+        <label for="full-name">Full Name *</label>
+        <input type="text" id="full-name" name="full_name"
+               autocomplete="name" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email"
+               autocomplete="email" required>
+
+        <label for="phone">Phone / WhatsApp Number *</label>
+        <input type="tel" id="phone" name="phone"
+               autocomplete="tel" required>
+
+        <label for="company">Company or Business Name</label>
+        <input type="text" id="company" name="company">
+      </fieldset>
+
+      <fieldset>
+        <legend>02 — Project Requirements</legend>
+
+        <label for="project-type">What do you need? *</label>
+        <select id="project-type" name="project_type" required>
+          <option value="">Select a project type</option>
+          <option value="business-website">Business Website</option>
+          <option value="portfolio">Portfolio Website</option>
+          <option value="ecommerce">E-commerce Website</option>
+          <option value="landing-page">Landing Page</option>
+          <option value="blog">Blog or News Website</option>
+          <option value="redesign">Website Redesign</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="purpose">What is the main purpose of your website? *</label>
+        <input type="text" id="purpose" name="purpose"
+               placeholder="e.g. promote my business" required>
+
+        <label for="pages">Estimated Number of Pages</label>
+        <select id="pages" name="page_count">
+          <option value="">Not sure yet</option>
+          <option value="1-3">1–3 pages</option>
+          <option value="4-6">4–6 pages</option>
+          <option value="7-10">7–10 pages</option>
+          <option value="10+">More than 10 pages</option>
+        </select>
+
+        <label for="features">Features You Need</label>
+        <textarea id="features" name="features" rows="4"
+          placeholder="e.g. contact form, booking system, gallery, online payments"></textarea>
+
+        <label for="description">Describe Your Project *</label>
+        <textarea id="description" name="description" rows="6"
+          placeholder="Explain your idea, target audience, and requirements..."
+          required></textarea>
+
+        <label for="references">Reference Website Links (Optional)</label>
+        <textarea id="references" name="references" rows="3"
+          placeholder="Paste links to websites whose design you like"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>03 — Budget and Timeline</legend>
+
+        <label for="budget">Estimated Budget *</label>
+        <select id="budget" name="budget" required>
+          <option value="">Select your budget</option>
+          <option value="under-25000">Under PKR 25,000</option>
+          <option value="25000-50000">PKR 25,000–50,000</option>
+          <option value="50000-100000">PKR 50,000–100,000</option>
+          <option value="100000-250000">PKR 100,000–250,000</option>
+          <option value="250000-plus">Above PKR 250,000</option>
+          <option value="discuss">I'd like to discuss my budget</option>
+        </select>
+
+        <label for="start-date">Preferred Start Date</label>
+        <input type="date" id="start-date" name="start_date">
+
+        <label for="deadline">Desired Completion Date</label>
+        <input type="date" id="deadline" name="deadline">
+
+        <label for="urgency">How Urgent Is Your Project?</label>
+        <select id="urgency" name="urgency">
+          <option value="">Select an option</option>
+          <option value="flexible">Flexible</option>
+          <option value="within-month">Within one month</option>
+          <option value="within-two-weeks">Within two weeks</option>
+          <option value="urgent">Urgent — please discuss availability</option>
+        </select>
+
+        <label for="notes">Anything Else We Should Know?</label>
+        <textarea id="notes" name="notes" rows="4"
+          placeholder="Additional details, questions, or special requests"></textarea>
+      </fieldset>
+
+      <div class="booking-consent">
+        <label>
+          <input type="checkbox" name="contact_consent"
+                 value="yes" required>
+          I agree that DevCoders may contact me about this project request. *
+        </label>
+      </div>
+
+      <button type="submit" class="booking-submit">
+        Submit Project Request
+      </button>
+
+      <p class="booking-note">
+        Submitting this form is a project inquiry, not a confirmed booking
+        or a payment.
+      </p>
+
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 DevCoders. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</body>
+
+</html>
